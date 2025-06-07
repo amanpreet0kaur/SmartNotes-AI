@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Document Summary - GreenProductive</title>
+  <style>
+  body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #b9c4ab;
+      color: #131F08;
+      margin: 0;
+      padding: 0;
+    
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #E8E4D9;
+      border: 8px solid #7C8654;
+      border-radius: 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #4C5922;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #4C5922;
+      color: white;
+      border: 2px solid #131F08;
+      border-radius: 10px;
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 30px;
+    }
+    button:hover {
+      background-color: #131F08;
+    }
+    pre {
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      color: #131F08;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+  <h2>📌 Document Summary</h2>
+  <button onclick="getSummary()">Generate Summary</button>
+  <pre id="result">Your summary will appear here...</pre>
+
+  <script>
+    function getSummary() {
+      fetch("/summary")
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("result").textContent = data.summary || data.error || "No summary found.";
+        })
+        .catch(err => {
+          document.getElementById("result").textContent = "An error occurred while fetching the summary.";
+          console.error(err);
+        });
+    }
+  </script>
+  </div>
+</body>
+</html>

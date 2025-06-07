@@ -1,0 +1,86 @@
+body {
+  background-color: #d6d4c4; /* beige from palette */
+  font-family: 'Fredoka', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #141e0d; /* dark forest green */
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 6px double #394c21; /* olive green */
+  border-radius: 20px;
+  background-color: #f9f8f3; /* off-white */
+  box-shadow: 0 0 10px rgba(57, 76, 33, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #394c21;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  color: #394c21;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background-color: #aab394; /* light sage */
+  border: 2px solid #394c21;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 4px 4px 12px rgba(57, 76, 33, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card h2 {
+  color: #141e0d;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #394c21;
+  margin-bottom: 15px;
+}
+
+.card input[type="file"] {
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: #141e0d;
+}
+
+button {
+  background-color: #6f7d47; /* sage */
+  color: white;
+  border: 2px solid #141e0d;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #394c21; /* olive green */
+  transform: scale(1.05);
+}

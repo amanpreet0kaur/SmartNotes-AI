@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenProductive</title>
+  <style>
+    body {
+      background-color: #b9c4ab;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #131F08;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #E8E4D9;
+      border: 8px solid #7C8654;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #4C5922;
+      margin-bottom: 15px;
+    }
+
+    .description {
+      font-size: 1.15rem;
+      color: #4C5922;
+      margin-bottom: 35px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .upload-section {
+      background-color: #7C8654;
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 35px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .upload-section label {
+      font-weight: 600;
+      color: #E8E4D9;
+      margin-bottom: 10px;
+      font-size: 1rem;
+      display: block;
+    }
+
+    .upload-section input[type="file"] {
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #4C5922;
+      background-color: #E8E4D9;
+      color: #131F08;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .upload-section button {
+      background-color: #4C5922;
+      color: white;
+      border: 2px solid #131F08;
+      border-radius: 10px;
+      padding: 10px 24px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .upload-section button:hover {
+      background-color: #131F08;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .button-card {
+      background-color: #7C8654;
+      padding: 20px;
+      border-radius: 12px;
+      width: 240px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .button-card:hover {
+      transform: scale(1.03);
+    }
+
+    .button-card button {
+      background-color: #4C5922;
+      color: white;
+      border: 2px solid #131F08;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .button-card button:hover {
+      background-color: #131F08;
+    }
+
+    .button-description {
+      color: #E8E4D9;
+      font-size: 0.95rem;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .description {
+        font-size: 1rem;
+      }
+
+      .upload-section {
+        width: 100%;
+      }
+
+      .button-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>SmartNotes-AI</h1>
+    <p  align='justify',class="description">
+       Welcome to the SmartNotes-AI — your smart companion for understanding and interacting with PDF documents! Upload any PDF (textbooks, articles, manuals), and instantly get a concise summary, create useful flashcards for study, or ask questions directly about the content. 
+    
+  </p>
+
+    </p>
+
+    <div class="upload-section">
+      <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="file">Upload a PDF:</label>
+        <input type="file" id="file" name="file" accept="application/pdf" required />
+        <button type="submit">Upload</button>
+      </form>
+    </div>
+
+    <div class="buttons">
+      <div class="button-card">
+        <button onclick="location.href='/summary_page'">Generate Summary</button>
+        <p class="button-description">Get a quick summary of your uploaded content.</p>
+      </div>
+      <div class="button-card">
+        <button onclick="location.href='/qa_page'">Ask Questions</button>
+        <p class="button-description">Query your uploaded document for specific answers.</p>
+      </div>
+      <div class="button-card">
+        <button onclick="location.href='/flashcards_page'">Flashcards</button>
+        <p class="button-description">Create flashcards to review key concepts.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ask a Question</title>
+   <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #b9c4ab;
+      color: #131F08;
+      margin: 0;
+      padding: 0;
+    
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #E8E4D9;
+      border: 8px solid #7C8654;
+      border-radius: 20px;
+      text-align: center;
+    }
+ 
+    h2 {
+      color: #4C5922;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #4C5922;
+      color: white;
+      border: 2px solid #131F08;
+      border-radius: 10px;
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 30px;
+    }
+    button:hover {
+      background-color: #131F08;
+    }
+    pre {
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      color: #131F08;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class ="container" >
+
+  <h2>❓ Ask a Question from the PDF</h2>
+  <textarea id="question" placeholder="Type your question here..."></textarea><br>
+  <button onclick="ask()">Ask</button>
+  <pre id="result"></pre>
+
+  <script>
+    function ask() {
+      const q = document.getElementById("question").value;
+      fetch("/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question: q })
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("result").textContent = `Q: ${data.question}\nA: ${data.answer}`;
+      });
+    }
+    </div>
+  </script>
+</body>
+</html>
