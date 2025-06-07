@@ -1,9 +1,5 @@
 # SmartNotes-AI
 
----
-
-# 🧠 Document Insight Assistant
-
 This is a Flask-based web application that allows users to:
 
 * Extract text from PDFs using **Google Document AI**
@@ -28,15 +24,22 @@ This is a Flask-based web application that allows users to:
 ## 📁 Folder Structure
 
 ```
-project/
-├── app.py                   # Main Flask app
-├── templates/
-│   ├── home.html
-│   ├── qa.html
-│   ├── flashcards.html
-│   └── summary.html
-├── requirements.txt
-└── README.md
+Directory structure:
+└── amanpreet0kaur-smartnotes-ai/
+    ├── README.md
+    └── study/
+        ├── app1.py
+        ├── faiss_index.index
+        ├── study.ipynb
+        ├── studysmart.ipynb
+        ├── text_chunks.pkl
+        ├── static/
+        │   └── style.css
+        └── templates/
+            ├── flashcards.html
+            ├── home.html
+            ├── qa.html
+            └── summary.html
 ```
 
 ---
