@@ -12,9 +12,9 @@ import os
 app = Flask(__name__)
 
 # Document AI config
-project_id = "wise-env-461717-t5"
-processor_id = "86a7eec52bbb9616"
-location = "us"
+project_id = 
+processor_id = 
+location = 
 
 opts = ClientOptions(api_endpoint=f"{location}-documentai.googleapis.com")
 client = documentai_v1.DocumentProcessorServiceClient(client_options=opts)
@@ -22,7 +22,7 @@ full_processor_name = client.processor_path(project_id, location, processor_id)
 
 embed_model = SentenceTransformer("all-MiniLM-L6-v2")
 
-GROQ_API_KEY = "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"
+GROQ_API_KEY = 
 
 text_chunks = []
 index = None
