@@ -1,7 +1,5 @@
 # SmartNotes-AI
 
-
-
 ---
 
 # 🧠 Document Insight Assistant
@@ -60,22 +58,7 @@ project/
 4. **Summarize** → Groq summarizes document
 5. **Flashcards** → Groq generates flashcards from extracted text
 
----
 
-## 🔍 Available Endpoints
-
-| Method | Endpoint           | Description                            |
-| ------ | ------------------ | -------------------------------------- |
-| GET    | `/`                | Home page                              |
-| POST   | `/upload`          | Upload and process a PDF               |
-| POST   | `/ask`             | Ask a question about the document      |
-| GET    | `/summary`         | Get a summary of the uploaded document |
-| GET    | `/flashcards`      | Generate 5 flashcards from the text    |
-| GET    | `/summary_page`    | Summary UI page                        |
-| GET    | `/flashcards_page` | Flashcard UI page                      |
-| GET    | `/qa_page`         | QA UI page                             |
-
----
 
 ## 📦 Dependencies
 
@@ -93,14 +76,21 @@ textwrap
 
 
 
-## 📸 Screenshots (optional)
+## 📸 Screenshots 
 
-Include screenshots of:
 
 * Upload page
+  ![image](https://github.com/user-attachments/assets/f14a0a3b-8183-4de5-92b6-2e189cac6e99)
+
 * Summary view
+  ![image](https://github.com/user-attachments/assets/8c7ac243-f556-4e70-b757-da64348ea45a)
+
 * Flashcard view
+  ![image](https://github.com/user-attachments/assets/7dac7e96-c2a2-46fc-a0cd-2abbd365f4f6)
+
 * QA interaction
+  ![image](https://github.com/user-attachments/assets/37a91163-4e53-4a01-ab46-687decfc6c22)
+
 
 ---
 
